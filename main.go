@@ -3,40 +3,28 @@ package main
 import "fmt"
 
 func main() {
+	age := 17
+	ageS := "17"
+	name := "Luffy"
 
-	// strings variable declaration
-	var nameOne string = "Mario"
-	var nameTwo = "Luigi"
-	var nameThree string
+	// Print
+	fmt.Print("hello, ")
+	fmt.Print("world! \n")
+	fmt.Print("New Line! \n")
 
-	fmt.Println(nameOne, nameTwo, nameThree)
+	// Println
+	fmt.Println("hello, with new line")
+	fmt.Println("goodbye, with new line")
+	fmt.Println("1: My age is", age, "and my name is", name)
 
-	nameOne = "Luffy"
-	nameThree = "Zoro"
+	// Printf (formatted strings)
+	fmt.Printf("2: My age is %v and my name is %v \n", age, name)
+	fmt.Printf("3: My age is %q and my name is %q \n", ageS, name)
+	fmt.Printf("age is of type %T \n", age)
+	fmt.Printf("score is %f \n", 255.5)
+	fmt.Printf("score is %0.1f \n", 255.5)
 
-	fmt.Println(nameOne, nameTwo, nameThree)
-
-	nameFour := "Yoshi" //short hand version
-	fmt.Println(nameFour)
-
-	// int variable declaration
-	var ageOne int = 20
-	var ageTwo = 30
-	ageThree := 40
-
-	fmt.Println(ageOne, ageTwo, ageThree)
-
-	// bits & memory
-	var numOne int8 = 25
-	var numTwo int8 = -128
-	var numThree uint8 = 25 // can't assign (-) because this type start with 0
-	numFour := 10
-
-	fmt.Println(numOne, numTwo, numThree, numFour)
-
-	var scoreOne float32 = 25.98
-	var scoreTwo float64 = 888888888.7
-	scoreThree := 1.5
-
-	fmt.Println(scoreOne, scoreTwo, scoreThree)
+	// Sprintf (save formatted strings)
+	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
+	fmt.Println(str)
 }
